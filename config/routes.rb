@@ -15,5 +15,9 @@ Rails.application.routes.draw do
   resources :tasks do
     post :import, on: :collection
   end
+
+  require 'sidekiq/web'
+  mount Sidekiq::Web, at: "/sidekiq"
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
