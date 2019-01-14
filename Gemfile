@@ -8,6 +8,7 @@ gem 'html2slim'
 gem 'bootstrap'
 gem 'rails_autolink'
 gem 'ransack'
+gem 'kaminari'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
