@@ -24,7 +24,6 @@ class Task < ApplicationRecord
   end
 
   def self.import(file)
-    binding.pry
     CSV.foreach(file.path, headers: true) do |row|
       task = new
       task.attributes = row.to_hash.slice(*csv_attributes)
