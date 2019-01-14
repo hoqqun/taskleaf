@@ -10,4 +10,12 @@
   .form-group
     = f.label :description
     = f.text_area :description, rows: 5, class: 'form-control', id: 'task_description'
+  .form-group
+    = f.label :image
+    = f.file_field :image, class: 'form-control'
+  - if @task.image.attached?
+    .form-group
+      p 現在の画像
+      = url_for(@task.image)
+      = image_tag @task.image
   = f.submit nil, class: 'btn btn-primary'
