@@ -1,0 +1,12 @@
+h1 チャットルーム
+.row
+  .form-group
+    = label_tag :message, "say something:"
+    = text_field_tag :message, "", { class: 'form-control' }
+.row
+  = link_to '送信', "#", remote: true, class: 'btn btn-primary mb-3', id: 'messageSend'
+  table.table.table-hover
+    thead.thead-default
+      th メッセージ
+    tbody
+      = render @messages
