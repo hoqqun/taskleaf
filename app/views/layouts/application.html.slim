@@ -2,7 +2,7 @@ doctype html
 html
   head
     title
-      | Taskleaf
+      | TODO | デモ
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
@@ -10,7 +10,7 @@ html
     = javascript_pack_tag 'application'
   body
     .app-title.navbar.navbar-expand-md.navbar-light.bg-light
-      .navbar-brand Taskleaf
+      .navbar-brand TODO
 
       ul.navbar-nav.m1-auto
         - if current_user
