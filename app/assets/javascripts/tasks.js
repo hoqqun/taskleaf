@@ -9,5 +9,7 @@ document.addEventListener('turbolinks:load', function() {
     });
   });
 
-  $('#task_description').froalaEditor();
+  $('#task_description').froalaEditor({
+    height: 300
+  });
 });
