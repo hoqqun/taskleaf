@@ -12,7 +12,7 @@ table.table.table-hover
       td= @task.name
     tr
       th= Task.human_attribute_name(:description)
-      td= auto_link(simple_format(h(@task.description), {}, sanitize: false, wrapper_tag: "div"))
+      td= @task.description.html_safe
     tr
       th= Task.human_attribute_name(:image)
       td= image_tag @task.image if @task.image.attached?

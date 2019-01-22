@@ -8,4 +8,6 @@ document.addEventListener('turbolinks:load', function() {
       e.currentTarget.style.backgroundColor = '';
     });
   });
+
+  $('#task_description').froalaEditor();
 });
